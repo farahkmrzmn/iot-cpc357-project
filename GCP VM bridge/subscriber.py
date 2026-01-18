@@ -6,10 +6,10 @@ from google.cloud import firestore
 # --- CONFIGURATION ---
 MQTT_BROKER = "localhost"
 MQTT_TOPIC = "iot"
-KEY_FILE = "fair-veld-481702-a1-d0ee1466211f.json"  # Ensure this file is in the same folder
-DB_ID = "cpc357-assignment2"  # Your specific Firestore Database ID
+KEY_FILE = "fair-veld-481702-a1-d0ee1466211f.json"  
+DB_ID = "cpc357-assignment2"  # Firestore Database ID
 
-# Initialize Firestore Client with your specific database ID
+# Initialize Firestore Client with pecific database ID
 try:
     db = firestore.Client.from_service_account_json(KEY_FILE, database=DB_ID)
     print(f"Connected to Firestore Database: {DB_ID}")
